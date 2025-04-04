@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import datetime
+import numpy as np
 
 # App Title
 st.title("Personalized Diabetes Management Platform")
@@ -38,12 +39,6 @@ else:
 
 
 
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-import datetime
-
-# ... (rest of your code) ...
 
 # Personalized Recommendations
 st.header("Personalized Recommendations")
@@ -69,9 +64,6 @@ if blood_glucose_level >= 200:
     """)
 
 
-# ... (rest of your code) ...
-
-
 # Progress Tracking
 st.header("Progress Tracking")
 st.subheader("Enter your blood glucose levels for the past four months:")
@@ -90,12 +82,11 @@ fig = px.line(blood_glucose_data, x="Month", y="Blood Glucose Level (mg/dL)",
 st.plotly_chart(fig)
 
 
-import streamlit as st
-import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression  # Using Linear Regression from scikit-learn
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 # Sample Dataset (Replace with your actual data if available)
 data = pd.DataFrame({
@@ -130,29 +121,8 @@ prediction = model.predict(user_input)[0]
 st.header("Prediction")
 st.write(f"Predicted Blood Glucose Level: {prediction:.2f} mg/dL")
 
-# ... (rest of your code, including recommendations based on prediction) ...
 
-
-
-
-
-import streamlit as st
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
-
-# ... (rest of your code - data loading, preprocessing, model training) ...
-
-# Streamlit App
 st.title("Diabetes Prediction Tool")
-
-# ... (user input) ...
-
-# Prediction
-# ... (prediction code) ...
 
 # Enhanced Linear Regression Graph
 
@@ -179,26 +149,8 @@ cbar = fig.colorbar(scatter, ax=ax, label="Blood Glucose Level (mg/dL)")
 cbar.ax.tick_params(labelsize=12)
 st.pyplot(fig)
 
-# ... (rest of your code) ...
-
-
-import streamlit as st
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression
-import plotly.graph_objects as go
-
-# ... (rest of your code - data loading, preprocessing, model training) ...
-
 # Streamlit App
 st.title("Diabetes Prediction")
-
-# ... (user input) ...
-
-# Prediction
-# ... (prediction code) ...
 
 # Creative Linear Regression Graph with Plotly
 st.header("Interactive Prediction Visualization")
